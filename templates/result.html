@@ -51,7 +51,7 @@
                     {% for title, details in rank_by_score.items() %}
                     <div class="row py-1">
                         <div class="col-md-12">
-                            <a href="{{ details['url'] }}">
+                            <a href="{{ details['url'] }}" target="_blank">
                                 <h4>{{ title }}</h4>
                             </a>
                             <p>
@@ -80,7 +80,7 @@
                "{% for title, details in rank_by_time.items() %}\n" +
                "                    <div class=\"row py-1\">\n" +
                "                        <div class=\"col-md-12\">\n" +
-               "                            <a href=\"{{ details['url'] }}\">\n" +
+               "                            <a href=\"{{ details['url'] }}\" target=\"_blank\">\n" +
                "                                <h4>{{ title }}</h4>\n" +
                "                            </a>\n" +
                "                            <p>\n" +
@@ -96,7 +96,7 @@
                "{% for title, details in rank_by_score.items() %}\n" +
                "                    <div class=\"row py-1\">\n" +
                "                        <div class=\"col-md-12\">\n" +
-               "                            <a href=\"{{ details['url'] }}\">\n" +
+               "                            <a href=\"{{ details['url'] }}\" target=\"_blank\">\n" +
                "                                <h4>{{ title }}</h4>\n" +
                "                            </a>\n" +
                "                            <p>\n" +
