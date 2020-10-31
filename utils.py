@@ -1,3 +1,6 @@
+import datetime
+import time
+
 def hdiv(dividend, divisor, precision=0):
     """高精度计算除法，没有四舍五入
 
@@ -55,3 +58,30 @@ def hdiv(dividend, divisor, precision=0):
         ans = '-' + ans
 
     return ans
+
+def timeParse(time_str):
+    month_cvt = {
+        "January": 1,
+        "February": 2,
+        "March": 3,
+        "April": 4,
+        "May": 5,
+        "June": 6,
+        "July": 7,
+        "August": 8,
+        "September": 9,
+        "October": 10,
+        "November": 11,
+        "December": 12
+    }
+    time = time_str.split(",")
+    date_str, time_str = time[0], time[1]
+    date = date_str.split()
+    month, day, year = month_cvt.get(date[0]), int(date[1][: -2]), int(date[2])
+    time = time_str.split()
+    hour, minute, second = (int(item) for item in time[0].split(":"))
+    if time[1] == "pm":
+        hour += 12
+    date_time = datetime.datetime(year, month, day, hour, minute, second)
+    return date_time.timestamp()
+
