@@ -57,6 +57,9 @@
                             <p>
                                 更新时间：{{ details["update_time"] }}
                             </p>
+                            <p>
+                                {{ details["highlight"]|safe }}
+                            </p>
                         </div>
                     </div>
                     {% endfor %}
@@ -86,6 +89,9 @@
                "                            <p>\n" +
                "                                更新时间：{{ details['update_time'] }}\n" +
                "                            </p>\n" +
+               "                            <p>\n" +
+               "                                {{ details['highlight']|safe }}\n" +
+               "                            </p>\n" +
                "                        </div>\n" +
                "                    </div>\n" +
                "                    {% endfor %}"
@@ -101,6 +107,9 @@
                "                            </a>\n" +
                "                            <p>\n" +
                "                                更新时间：{{ details['update_time'] }}\n" +
+               "                            </p>\n" +
+               "                            <p>\n" +
+               "                                {{ details['highlight']|safe }}\n" +
                "                            </p>\n" +
                "                        </div>\n" +
                "                    </div>\n" +

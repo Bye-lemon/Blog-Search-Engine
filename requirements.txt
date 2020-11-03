@@ -3,3 +3,5 @@ jieba==0.42.1
 motor==2.3.0
 pyppeteer==0.2.2
 uvicorn==0.12.2
+aiofiles==0.6.0
+jinja2==2.11.2

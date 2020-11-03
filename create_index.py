@@ -31,7 +31,8 @@ async def run():
                     value = document_.get("article_link")
                     await index_.find_one_and_update({"word": word}, {
                         "$set": {
-                            "article_link": value + "\n" + url + " " + str(hdiv(words.count(word), len(words), len(str(len(words))) + 2))
+                            "article_link": value + "\n" + url + " " + str(hdiv(words.count(word),
+                                                                                len(words), len(str(len(words))) + 2))
                         }
                     })
     article_cnt = await db.rawSiteInfo.count_documents({})
